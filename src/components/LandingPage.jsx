@@ -13,54 +13,48 @@ export default function LandingPage() {
   useEffect(() => {
     auth.onAuthStateChanged(function (user) {
       if (user) {
-        // if(db.ref('/members/'+user.uid)){
-        //   his.push("/app");
-        // }
-        // else{
-          // db.ref('/members/').push(user.uid);
-          // his.push('/makeProfile');
-        // }
-
-        auth.getUser(user.uid).then(() => {
-          his.push("/app");
-        }).catch(() =>{
-          db.ref('/members/').set(user.uid);
-          his.push('/makeProfile');
-        })
-
+        his.push("/app");
       }
     });
+    // auth.onAuthStateChanged(function (user) {
+    //   if (user) {
+    // if(db.ref('/members/'+user.uid)){
+    //   his.push("/app");
+    // }
+    // else{
+    // db.ref('/members/').push(user.uid);
+    // his.push('/makeProfile');
+    // }
   }, []);
 
   const signin = (e) => {
     auth.signInWithPopup(provider).catch(alert);
 
-  //   auth
-  // .signInWithPopup(provider)
-  // .then((result) => {
-  
-  //   var credential = result.credential;
+    //   auth
+    // .signInWithPopup(provider)
+    // .then((result) => {
 
-  //   // This gives you a Google Access Token. You can use it to access the Google API.
-  //   var token = credential.accessToken;
-  //   // The signed-in user info.
-  //   var user = result.user;
+    //   var credential = result.credential;
 
-  //   if(auth)
+    //   // This gives you a Google Access Token. You can use it to access the Google API.
+    //   var token = credential.accessToken;
+    //   // The signed-in user info.
+    //   var user = result.user;
 
-  //   // ...
-  // }).catch((error) => {
-  //   // Handle Errors here.
-  //   var errorCode = error.code;
-  //   var errorMessage = error.message;
-  //   // The email of the user's account used.
-  //   var email = error.email;
-  //   // The firebase.auth.AuthCredential type that was used.
-  //   var credential = error.credential;
-  //   // ...
-  // });
+    //   if(auth)
 
-      }
+    //   // ...
+    // }).catch((error) => {
+    //   // Handle Errors here.
+    //   var errorCode = error.code;
+    //   var errorMessage = error.message;
+    //   // The email of the user's account used.
+    //   var email = error.email;
+    //   // The firebase.auth.AuthCredential type that was used.
+    //   var credential = error.credential;
+    //   // ...
+    // });
+  };
 
   return (
     <>
@@ -75,7 +69,11 @@ export default function LandingPage() {
       <div className="land_main">
         <div>
           <p className="land_p">Track your expenses with an easy to use app</p>
-          <button type="button" onClick={e=>signin(e)}  class="btn btn-primary land_button">
+          <button
+            type="button"
+            onClick={(e) => signin(e)}
+            class="btn btn-primary land_button"
+          >
             TRY IT!
           </button>
         </div>

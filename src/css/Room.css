@@ -1,7 +1,59 @@
 .member_div{
     display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.member_div >div{
+    padding: 0.5rem;
+}
+.member_div >img{
+    height: 3rem;
 }
 
+h1{
+    padding: 1rem;
+}
+
+h2{
+    padding: 0.8rem;
+}
 .room_h1{
     text-align: center;
+}
+
+.table>:not(caption)>*>*{
+    padding: 1.4rem 0.8rem;
+  } 
+.table{
+    width: 90%;
+    background-color: beige;
+}
+
+  .tablealign{
+    display: grid;
+    align-items:end;
+    margin: 2rem;
+    grid-template-columns: 30% 70%;
+} 
+
+.setting-img{
+    position: absolute;
+    right: 0;
+    height: 5rem;
+    border-radius: 20%;
+}
+
+.room_main{
+    position: relative;
+    margin-bottom: 1rem;
+}
+.room_button{
+    text-align: center;
+}
+
+.room_button >button{
+    padding: 0.6rem 2.5rem;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
 }

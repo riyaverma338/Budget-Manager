@@ -7,12 +7,12 @@ export default function Member() {
         {
             id: 1,
             Name: "riya",
-            email: "verma@gmail",
+            email: "verma@gmail.com",
         },
         {
             id: 2,
             Name: "shruti",
-            email: "verma@gmail",
+            email: "verma@gmail.com",
         },
         {
             id: 3,
@@ -28,7 +28,6 @@ export default function Member() {
     ]
     return (
         <>
-            <h1>Members</h1>
                 { data.map((data) => (
                 <div className='member_div'>
                      <img src={user} alt='icon' />
