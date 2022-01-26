@@ -12,11 +12,6 @@ function App() {
     <>
       <Router>
         <Switch>
-          {/* route for landing page */}
-          {/* <Route exact path="/">
-        <LandingPage/>
-      </Route> */}
-          {/* route for homepage */}
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/app" component={Homepage} />
           <Route exact path="/room" component={Room} />
