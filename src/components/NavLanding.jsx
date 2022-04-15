@@ -7,9 +7,9 @@ const Nav = () => {
     <nav class="navbar navbar_land">
       <div class="navland_container">
         <div class="navland_link">
-        <Link href="#">Home</Link>
-        <Link href="#">About Us</Link>
-        <Link href="#">Contact</Link>
+        <Link to="/">Home</Link>
+        <Link to="/about">About Us</Link>
+        <Link to="/contact">Contact</Link>
         </div>
         <form class="d-flex">
           <button class="btn btn-primary nav_landbtn" type="submit">
